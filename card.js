@@ -126,39 +126,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 確認 template 和 container 是否存在
   const template = document.getElementById('product-template');
-  const container = document.getElementById(`product-container${i}`);
+
+
+  for (let i = 0; i < 3; i++) {
+    const container = document.getElementById(`product-container${i}`);
+    if (!container) continue;
+
+    // 簡單生成商品卡片的函數
   
-    for (let i = 0; i < 3; i++) { };
+      productGroups[i].slice(0, 3).forEach(product => {
+        const clone = template.content.cloneNode(true);
+        
 
+        clone.querySelector('.card-img-top').src = product.img;
+        clone.querySelector('.card-title').textContent = product.title;
+        clone.querySelector('.card-text').textContent = `$${product.price}`;
+        clone.querySelector('.add-to-cart').dataset.name = product.title;
+        clone.querySelector('.add-to-cart').dataset.price = product.price;
+        clone.querySelector('.add-to-cart').dataset.img = product.img;
+        clone.querySelector('.add-to-cart').textContent = '加入購物車';
+        const link = clone.querySelector('.stretched-link');
+        const queryParams = new URLSearchParams(product).toString(); // 將商品資料轉換為查詢字串
+        link.href = `商品頁面.html?${queryParams}`; // 將商品詳情頁的 URL 設為 <a> 標籤的 href
 
-  
-
-  // 簡單生成商品卡片的函數
-  productGroups.forEach((group) => {
-    group.forEach(product => {
-      const clone = template.content.cloneNode(true);
-      const imgElement = clone.querySelector('.card-img-top');
-      // 設置商品資料
-      imgElement.onload = () => {
-        console.log('圖片加載成功:', product.img);
-      };
-
-
-      clone.querySelector('.card-img-top').src = product.img;
-      clone.querySelector('.card-title').textContent = product.title;
-      clone.querySelector('.card-text').textContent = `$${product.price}`;
-      clone.querySelector('.add-to-cart').dataset.name = product.title;
-      clone.querySelector('.add-to-cart').dataset.price = product.price;
-      clone.querySelector('.add-to-cart').dataset.img = product.img;
-      clone.querySelector('.add-to-cart').textContent = '加入購物車';
-      const link = clone.querySelector('.stretched-link');
-      const queryParams = new URLSearchParams(product).toString(); // 將商品資料轉換為查詢字串
-      link.href = `測試.html?${queryParams}`; // 將商品詳情頁的 URL 設為 <a> 標籤的 href
-
-      container.appendChild(clone);
-    });
-
-  });
+        container.appendChild(clone);
+      });
+    }
 });
 // 遍歷商品資料並生成卡片
 // productGroups.forEach((group, index) => {

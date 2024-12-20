@@ -124,6 +124,9 @@
     style="display: grid;position: fixed;right: 0;bottom: 0; background-color: #eaebeb; border: 2px solid rgb(210, 209, 209);">
     <a href="#" class="btn "><i class="bi bi-caret-up"></i></a>
   </div>
+  <!-- 吐司位子 -->
+  <div id="toast-container" class="position-fixed bottom-0 start-50 translate-middle-x mb-3" style="z-index: 1050;">
+  </div>
 
   <!-- header導入位子 -->
   <header class="p-3 ">
@@ -132,7 +135,7 @@
       <div class="d-inline-flex col-lg-6 d-flex flex-column flex-lg-row align-items-center ">
         <!-- Logo 區塊 -->
         <div>
-          <a href="/首頁改動-1.html">
+          <a href="/index.html">
             <img src="./img/HUBD 商標.jpg" alt="網站標誌" class="rounded-pill" style="max-width: 100%; height: auto;">
           </a>
         </div>
@@ -154,7 +157,7 @@
         <button class="btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
           aria-controls="offcanvasRight">
           <i class="bi bi-cart" style="font-size: 1.8rem;"></i>
-          <span id="cart-count"class="position-absolute  badge bg-danger d-none">0</span>
+          <span id="cart-count" class="position-absolute  badge bg-danger d-none">0</span>
         </button>
         <!-- 讓他從側邊出來 -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -314,9 +317,13 @@
             <h5 class="card-title"></h5>
             <p class="card-text"></p>
             <a href="" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="" data-price="" data-img="" ></button>
+            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="" data-price=""
+              data-img=""></button>
           </div>
+        </div>
+      </div>
     </template>
+
     <!-- 內容容器 -->
     <div class="container my-5">
       <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container" id="product-container0">
@@ -375,16 +382,9 @@
     </footer>
   </div>
 
- 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./card.js"></script>
-  
-
-
-
-
-
+  <script src="./shopping card.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

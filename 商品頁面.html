@@ -277,13 +277,14 @@
         <h3 id="product-title"><b></b></h3>
         <p id="product-subtitle"></p>
         <h5 id="product-price"></h5>
-        <button id="buyit" class="btn btn-danger btn-lg mt-3 add-to-cart" style="border-radius: 0;">加入購物車</button>
+        <button id="buyit" class="btn btn-danger btn-lg mt-3 add-to-cart" data-name="" data-price="" data-img=""
+          style="border-radius: 0;">加入購物車</button>
 
       </div>
 
       <hr class="mt-5">
 
-      <div class="col-lg-7 " style="margin-right:3% ;">
+      <div class="col-lg-7 ">
         <P id="product-material"></P>
         <p id="product-size"> </p>
         <P id="product-gap"></P>
@@ -292,11 +293,11 @@
         <br>
         <h5 id="product-more"><b></b></h5>
       </div>
-      <div class="col-lg- visually-hidden"></div>
+      <div class="col-lg-2 visually-hidden"></div>
 
     </div>
 
-    <br>
+    <br><br>
 
     <div id="wear" class="d-flex  flex-lg-column flex-column justify-content-center align-items-center">
       <div>
@@ -304,20 +305,15 @@
       </div>
       <br>
       <div>
-        <img id="wear2"  src="" alt="實戴圖" class=" d-block mx-auto">
+        <img id="wear2" src="" alt="實戴圖" class=" d-block mx-auto">
       </div>
       <br>
       <div>
-        <img id="wear3"  src="" alt="實戴圖" class=" d-block mx-auto">
+        <img id="wear3" src="" alt="實戴圖" class=" d-block mx-auto">
       </div>
     </div>
-
-
-
-
-
-
   </section>
+
 
   <br><br><br><br><br>
 
@@ -362,70 +358,11 @@
       </ul>
     </footer>
   </div>
-
-
   <script src="product-detail.js"></script>
+  <script src="./card.js"></script>
+  <script src="./shopping card.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cartItems = document.getElementById('cart-items');
-      const totalPrice = document.getElementById('total-price');
-      const cartCount = document.getElementById('cart-count');
-      let cart = [];
 
-      // 加入購物車邏輯
-      document.querySelectorAll('.add-to-cart').forEach(button => {
-        button.addEventListener('click', () => {
-          const name = button.getAttribute('data-name');
-          const price = parseFloat(button.getAttribute('data-price'));
-          const img = button.getAttribute('data-img');
-          // 將商品加入購物車陣列
-          cart.push({ name, price, img });
-          updateCart();
-        });
-      });
-
-      // 更新購物車畫面
-      function updateCart() {
-        cartItems.innerHTML = '';
-        let total = 0;
-
-        cart.forEach((item, index) => {
-          total += item.price;
-          // 創建購物車項目(圖片/名稱/價格/刪除紐)
-          const li = document.createElement('li');
-          li.className = 'list-group-item d-flex justify-content-between align-items-center';
-          li.innerHTML = `
-            <img src="${item.img}" alt="${item.name}" style="width:50px; height: 50px; object-fit: cover; margin-right: 10px;"
->            <span>${item.name} - $${item.price.toFixed(2)}</span>
-            <button class="btn btn-sm btn-danger remove-item" data-index="${index}">&times;</button>
-          `;
-          cartItems.appendChild(li);
-        });
-
-        // 更新總金額
-        totalPrice.textContent = `$${total.toFixed(2)}`;
-
-        //更新購物車數量
-
-        cartCount.textContent = cart.length;
-        if (cart.length > 0) {
-          cartCount.classList.remove('d-none');
-        } else {
-          cartCount.classList.add('d-none');
-        }
-
-        // 移除商品功能
-        document.querySelectorAll('.remove-item').forEach(button => {
-          button.addEventListener('click', () => {
-            const index = parseInt(button.getAttribute('data-index'));
-            cart.splice(index, 1);
-            updateCart();
-          });
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

@@ -10,13 +10,7 @@ const wearImg1 = params.get('wearImg1');
 const wearImg2 = params.get('wearImg2');
 const wearImg3 = params.get('wearImg3');
 
-// document.getElementById('goodspicture').src = productImg;
-// document.getElementById('product-title').textContent = productTitle;
-// document.getElementById('product-price').textContent = `NT$ ${productPrice}`;
-// document.getElementById('product-subtitle').textContent = productBrief;
-// document.getElementById('wear1') || '';
-// document.getElementById('wear2') || '';
-// document.getElementById('wear3') || '';
+
 if (productImg) document.getElementById('goodspicture').src = productImg;
 if (productTitle) document.getElementById('product-title').textContent = productTitle;
 if (productPrice) document.getElementById('product-price').textContent = `NT$ ${productPrice}`;

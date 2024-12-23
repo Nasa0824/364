@@ -179,6 +179,7 @@
                 所有商品
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./銀黏土.html">銀黏土課程</a></li>
                 <li><a class="dropdown-item" href="./訂製指紋戒指.html">訂製指紋戒指</a></li>
                 <li><a class="dropdown-item" href="./韓國選品.html">韓國選品</a></li>
                 <!-- 巢狀式選單 -->
@@ -216,135 +217,57 @@
     <h1><b>HUBD自創</b></h1>
   </div>
 
-  <!-- 商品圖 -->
-  <div class="container my-5">
-    <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container">
+  <section>
+    <!-- 商品圖 -->
+    <template id="product-template">
       <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
+        <div class="card  product-card " style="width: 18rem; margin:3rem auto ;">
+          <img src="" class="card-img-top " alt="商品圖">
           <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$1200</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="1200">加入購物車</button>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="" class="stretched-link"></a>
+            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="" data-price=""
+              data-img=""></button>
           </div>
         </div>
       </div>
-      <!-- 000000000000000 -->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$2980</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="2980">加入購物車</button>
-          </div>
-        </div>
-      </div>
-      <!-- 00000000000000-->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$680</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="680">加入購物車</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </template>
 
-  <div class="container my-5">
-    <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container">
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$880</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="880">加入購物車</button>
-          </div>
-        </div>
-      </div>
-      <!-- 000000000000000 -->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$1280</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="1280">加入購物車</button>
-          </div>
-        </div>
-      </div>
-      <!-- 00000000000000-->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$780</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="780">加入購物車</button>
-          </div>
-        </div>
+    <!-- 內容容器 -->
+    <div class="container my-5">
+      <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container" id="product-container0">
       </div>
     </div>
-  </div>
 
-  <div class="container my-5">
-    <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container">
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$1280</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="1280">加入購物車</button>
-          </div>
-        </div>
-      </div>
-      <!-- 000000000000000 -->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$980</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="980">加入購物車</button>
-          </div>
-        </div>
-      </div>
-      <!-- 00000000000000-->
-      <div class="col-lg-4 ">
-        <div class="card product-card " style="width: 18rem; margin:3rem auto ;">
-          <img src="/img/1.jpg" class="card-img-top " alt="商品圖">
-          <div class="card-body">
-            <h5 class="card-title">客製化飾品</h5>
-            <p class="card-text">$660</p>
-            <a href="http://www.google.com" class="stretched-link"></a>
-            <button id="buyit" class="btn btn-danger btn-sm add-to-cart" data-name="商品名稱"
-              data-price="660">加入購物車</button>
-          </div>
-        </div>
+    <div class="container my-5">
+      <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container" id="product-container1">
       </div>
     </div>
-  </div>
+
+    <div class="container my-5">
+      <div class=" mx-auto d-flex flex-lg-row flex-column justify-content-center container" id="product-container2">
+      </div>
+    </div>
+  </section>
+  <!-- 分頁碼 -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center ">
+      <li class="page-item">
+        <a class="page-link" href="" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item "><a class="page-link" href="" >1</a></li>
+      <li class="page-item"><a class="page-link" href="">2</a></li>
+      <li class="page-item"><a class="page-link" href="">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
 
   <!-- 網頁最底層 -->
@@ -389,6 +312,9 @@
     </footer>
   </div>
 
+
+  <script src="./card.js"></script>
+  <script src="./shopping card.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

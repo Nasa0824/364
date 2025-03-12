@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <link rel="icon" href="/img/有去背.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <metan name="description" content="Happy unbirthday!364-非生日快樂，你依舊閃閃發亮-在非生日的364個日子裡。">
+    <meta name="keywords" content="364,選物店,銀飾,手做">
+    <meta name="author" content="許少宇">
+
+    <title>退款須知</title>
+
+    <!-- 導入Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- 改變字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans TC', sans-serif !important;
+      }
+
+      /* 更改輪播圖左右箭頭顏色 */
+      #button {
+        filter: invert(100%);
+      }
+
+      /* 調整圖片大小 */
+      img {
+        width: 80px;
+      }
+
+      /* 搜尋列的 */
+      .search-bar {
+        position: relative;
+      }
+
+      .search-bar input {
+        padding-right: 40px;
+        /* 給右側按鈕留出空間 */
+      }
+
+      .search-bar button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+        color: #6c757d;
+        /* 灰色按鈕顏色 */
+        cursor: pointer;
+      }
+
+      .search-bar button:hover {
+        color: #000;
+        /* 鼠標懸停時變為黑色 */
+      }
+
+      /* 巢狀式選單 */
+      .navbar-nav li:hover>ul.dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-submune {
+        position: relative;
+      }
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+
+  <header class="p-3 ">
+    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center ">
+
+      <div class="d-inline-flex col-lg-6 d-flex flex-column flex-lg-row align-items-center ">
+        <!-- Logo 區塊 -->
+        <div>
+          <a href="./index.html">
+            <img src="./img/HUBD 商標.jpg" alt="網站標誌" class="rounded-pill" style="max-width: 100%; height: auto;">
+          </a>
+        </div>
+
+        <!-- 搜尋區塊 -->
+        <div class="ms-1 mt-1" style="width: 100%; max-width: 20rem;">
+          <div class="search-bar d-flex w-100">
+            <input type="text" name="q" class="form-control rounded-pill" placeholder="搜尋..." style="flex-grow: 1;">
+            <button type="submit" class="btn  ms-2">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 購物車圖示 -->
+      <div class="mt-1">
+        <!-- 按鈕 -->
+        <button class="btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight">
+          <i class="bi bi-cart" style="font-size: 1.8rem;"></i>
+          <span id="cart-count" class="position-absolute  badge bg-danger d-none">0</span>
+        </button>
+        <!-- 讓他從側邊出來 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"><b>購買商品</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="cart-items" class="list-group mb-3"><!-- 購物車項目將被動態插入 --></ul>
+            <div class="d-flex justify-content-between">
+              <strong>總金額：</strong>
+              <span id="total-price">$0</span>
+            </div>
+            <button class="btn btn-danger w-100 mt-3"></a>結帳</button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-1">
+        <a href="./member.html" class="btn"><i class="bi bi-person-circle" style="font-size: 1.8rem;"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+
+  <!-- 導覽列navbar-brand -->
+  <nav class="navbar navbar-expand-lg  ">
+    <div class=" ms-2 col-lg-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><b>364HUBD</b></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- 1 -->
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <!-- 內容 -->
+            <li>
+              <a href="./index.html" class="btn text-black-50">首頁</a>
+            </li>
+
+            <li class="nav-item dropdown m">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                所有商品
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./class.html">銀黏土課程</a></li>
+                <!-- 巢狀式選單 -->
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">配件飾品</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./esk2000.html">異世界2000</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                關於HUBD
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./orderlist.html">訂購須知</a></li>
+                <li><a class="dropdown-item" href="./refundlist.html">退款須知</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:nasa0824@gmail.com">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <br><br>
+
+
+
+
+  <section class="container">
+    <div>
+      <h2><b>退款須知</b></h2>
+      <br>
+      <h5><b>代購商品不適用七天鑑賞期！！</b></h5>
+      <p>
+        代購商品為消費者要求所客製化訂購商品，經營者將以線上形式告知消費者，故排除消保法第十九條第一項解除權之適用，本官網出售之商品皆為消費者同意並支付訂金後，依訂單商品內容於國外購買且以消費者同意之郵寄方式寄出，本官網依照消費者之訂單指示客製化給付，因此排除七天猶豫期之適用。根據通訊交易解除權合理例外情事是用準則第二條第二款規定，依消費者要求所為之客製化給付，並經網站經營者告知消費者，將排除消保法第十九條第一項解除權之適用。
+      </p>
+      <br>
+      <p>為給您提供良好的購物體驗及避免退款退貨等過程不便，請您仔細瀏覽商品信息，根據實際需求與喜好訂購商品，完美主義者請三思風險後再下訂，如有任何疑問皆可由IG客服諮詢，讓364HUBD提供給您最好的服務！</p>
+      <br>
+      <p>以下情況可辦理退貨 :</p>
+      <p>・運輸過程造成貨品毀損無法使用。</p>
+      <p>・商品與訂單商品內容物不符。</p>
+      <p>・產品遭受非消費者之失誤所造成損毀。</p>
+      <br>
+      <h5><b>退款說明：</b></h5>
+      <p>退換時間 -「收貨隔日起算七日內」反應商品錯誤/商品缺失狀況 : 由本網站全額負擔退換運費。</p>
+      <p>為保障消費權益，收貨請「務必拍攝開箱影片」並提供影片證明商品錯誤/商品缺失之狀況，未提供開箱影片及逾期者，恕不受理。</p>
+      <br>
+      <p>・退款方式 -無論購買時您以何種方式付款，我們都將以轉帳方式退款。請提供正確的匯款帳號，以利完成退款手續。確認符合我們的退款標準，且資料確認無誤後，我們14個工作天內會將款項退到您的帳戶。</p>
+      <br>
+      <p>・商品狀態 - (含商品本體/配件/贈品/原廠包裝/吊牌及所有附隨文件及資料)，請勿缺漏任何配件/自行拆解商品/損毀原廠外盒。</p>
+      <p>如有遺失/毀損/缺件/已使用之狀況，恕無法以瑕疵品退換貨處理，也將依照損毀程度扣除為復原所需之整新費用。
+        服飾類個人衛生用品如：內衣褲、襪子、口罩等，經拆封後除瑕疵品外恕無法辦理退換貨。</p>
+      <br>
+      <h5><b>退款要求：</b></h5>
+      <p>-退回的物品須與原包裝一起處於未使用狀態。</p>
+      <p>-不接受以任何方式磨損、損壞、清洗或更改商品。/p>
+      <p>-不接受你直接寄回而未經與我們聯繫的退貨。</p>
+      <p>-不接受使用貨到付款服務退回的包裹。退貨運費不予退還。</p>
+      <p>-不接受非品質問題進行無條件的免費退貨。</p>
+      <p>-所有特價清倉商品售出後不進行退換。</p>
+      <p>-顧客收到商品後，如有發現嚴重瑕疵、嚴重破損、短缺等相關狀況，請於7日內聯繫客服。</p>
+      <p>退款聯繫資訊：官方LINE</p>
+      <br>
+      <p>＊任何退貨，請在寄回包裹前與我們的客服聯繫。我們不接受您直接寄回而未經我們確認的退貨。</p>
+      <br>
+      <p>・無法辦理退貨之情況</p>
+      <p>-商品污損、已下水、已剪吊牌，或以其他方式清潔、防水噴霧等使用過。</p>
+      <p>-超過7日後才提出之申請。</p>
+      <p>-個人喜好或尺寸問題（如：不適合、買太多、尺寸不合）。</p>
+      <p>-國際運送過程中，造成鞋盒碰撞、輕微損毀皆為正常現象。</p>
+      <p>・以上些不屬於瑕疵品範圍，請見諒。</p>
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 網頁最底層 -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+    <symbol id="facebook" viewBox="0 0 16 16">
+      <path
+        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+    </symbol>
+    <symbol id="line" viewBox="0 0 16 16">
+      <path
+        d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
+    </symbol>
+  </svg>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img src="./img/有去背.png" alt="商標">
+        </a>
+        <span class="mb-3 mb-md-0 text-muted"> 2020 , HUBD Studio</span>
+      </div>
+      <div class=" d-flex align-items-center"><span class="mb-3 mb-md-0 text-muted">HAPPY-UNBIRTHDAY</span></div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://line.me/R/ti/p/@528gygcj?oat_content=url"><svg class="bi"
+              width="24" height="24">
+              <use xlink:href="#line" />
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/364.happy.unbirthday/"><svg class="bi"
+              width="24" height="24">
+              <use xlink:href="#instagram" />
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/profile.php?id=100071452910430"><svg
+              class="bi" width="24" height="24">
+              <use xlink:href="#facebook" />
+            </svg></a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
